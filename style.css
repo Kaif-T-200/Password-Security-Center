@@ -1,6 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
-}
+}/* MADE BY KAIF TARASAGAR */
 .criteria-item {
     transition: all 0.3s ease;
 }
@@ -11,7 +11,7 @@ body {
 }
 .icon-check {
     color: #10B981;
-}
+} /* MADE BY KAIF TARASAGAR */
 .icon-cross {
     color: #EF4444;
 }
@@ -28,6 +28,7 @@ body {
     background-color: #1f2937;
     color: #fff;
     text-align: center;
+/* MADE BY KAIF TARASAGAR */
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
@@ -37,7 +38,7 @@ body {
     margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
-}
+} /* MADE BY KAIF TARASAGAR */
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -45,10 +46,19 @@ body {
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
+/* MADE BY KAIF TARASAGAR */
     border-style: solid;
     border-color: #1f2937 transparent transparent transparent;
-}
+}/* MADE BY KAIF TARASAGAR */
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
+
+
+                                                /* MADE BY KAIF TARASAGAR 
+                                               
+                                              https://www.linkedin.com/in/kaif-tarasgar-0b5425326/
+                                              
+                                              https://x.com/Kaif_T_200
+*/
