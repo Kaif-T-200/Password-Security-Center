@@ -8,7 +8,7 @@
 
 - ✅ **Real-time password strength analysis**
 - 🔁 **Secure password generation** with customizable length
-- 🔍 **Breach check** using Have I Been Pwned API
+- 🔍 **Breach check** using *Have I Been Pwned API*
 - 🧠 **Intelligent feedback** & improvement suggestions
 - 🧩 **Custom word mixing** for memorable yet strong passwords
 - 📋 **Copy to clipboard** & toggle password visibility
