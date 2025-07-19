@@ -33,5 +33,7 @@
    git clone https://github.com/yourusername/password-security-center.git
    cd password-security-center
 ---
-**Live Demo →** [Password Security Center](https://kaif-t-200.github.io/Password-Security-Center/)
+
+Made with ❤️ by **Kaif Tarasgar** | *Live Demo →* [Password Security Center](https://kaif-t-200.github.io/Password-Security-Center/)
+
 > **Note:** The full password is never sent to any server.
