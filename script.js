@@ -2,6 +2,7 @@ const passwordInput = document.getElementById('password');
 const togglePasswordBtn = document.getElementById('togglePassword');
 const copyPasswordBtn = document.getElementById('copyPassword');
 const copyTooltip = document.getElementById('copyTooltip');
+//MADE BY KAIF TARASAGAR 
 const generatePasswordBtn = document.getElementById('generatePassword');
 const lengthInput = document.getElementById('length');
 const eyeOpen = document.getElementById('eye-open');
@@ -17,6 +18,7 @@ const uppercaseCheckEl = document.getElementById('uppercase-check');
 const lowercaseCheckEl = document.getElementById('lowercase-check');
 const numberCheckEl = document.getElementById('number-check');
 const specialCheckEl = document.getElementById('special-check');
+//MADE BY KAIF TARASAGAR 
 const weakPasswordCheckEl = document.getElementById('weak-password-check');
 const pwnedCheckEl = document.getElementById('pwned-check');
 
@@ -36,7 +38,7 @@ const updateCriteriaUI = (element, isMet, text) => {
     element.classList.toggle('text-green-400', isMet);
     element.classList.toggle('text-red-400', element === pwnedCheckEl && isMet === false);
 };
-
+//MADE BY KAIF TARASAGAR 
 const resetUI = () => {
     strengthText.textContent = 'Start typing...';
     strengthPercentageEl.textContent = '';
@@ -71,7 +73,7 @@ const checkPasswordComplexity = async () => {
     updateCriteriaUI(numberCheckEl, /[0-9]/.test(password), 'Numbers (0-9)');
     updateCriteriaUI(specialCheckEl, /[!@#$%^&*(),.?":{}|<>]/.test(password), 'Special characters (!@#$%)');
     updateCriteriaUI(weakPasswordCheckEl, !result.feedback.warning, 'Not a common password');
-
+//MADE BY KAIF TARASAGAR 
     const isPwned = await checkPwnedPassword(password);
     updateCriteriaUI(pwnedCheckEl, !isPwned, isPwned ? `Pwned! Found ${isPwned} times.` : 'Not found in breaches');
 
@@ -102,7 +104,7 @@ const checkPasswordComplexity = async () => {
     if (result.feedback.suggestions.length > 0) {
          suggestionsHTML += result.feedback.suggestions.map(s => `<li class="flex items-start"><svg class="w-4 h-4 mr-2 mt-1 text-cyan-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>${s}</li>`).join('');
     }
-
+                    //MADE BY KAIF TARASAGAR 
     if (suggestionsHTML) {
         suggestionsEl.innerHTML = `<ul>${suggestionsHTML}</ul>`;
     } else {
@@ -120,7 +122,7 @@ togglePasswordBtn.addEventListener('click', () => {
 copyPasswordBtn.addEventListener('click', () => {
     const password = passwordInput.value;
     if (!password) return;
-    
+                                   //MADE BY KAIF TARASAGAR 
     const tempTextArea = document.createElement('textarea');
     tempTextArea.value = password;
     document.body.appendChild(tempTextArea);
@@ -145,7 +147,7 @@ generatePasswordBtn.addEventListener('click', () => {
         numbers: '0123456789',
         special: '!@#$%^&*()_+-=[]{}|;:,.<>?'
     };
-
+                             //MADE BY KAIF TARASAGAR 
     let password = '';
     let availableChars = charset.lower + charset.upper + charset.numbers + charset.special;
     
@@ -188,7 +190,7 @@ const checkPwnedPassword = async (password) => {
                 return 0;
             }
             throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        } //MADE BY KAIF TARASAGAR 
         const text = await response.text();
         const hashes = text.split('\n').map(line => {
             const [hashSuffix, count] = line.split(':');
@@ -217,7 +219,7 @@ const generateRandomComponent = (len) => {
     }
     return component;
 };
-
+                         //MADE BY KAIF TARASAGAR 
 mixPasswordBtn.addEventListener('click', async () => {
     const customWord = customWordInput.value.trim();
     if (customWord.length === 0) {
@@ -233,7 +235,9 @@ mixPasswordBtn.addEventListener('click', async () => {
     for (let i = 0; i < numOptions; i++) {
         const randomLength = Math.floor(Math.random() * (maxComponentLength - minComponentLength + 1)) + minComponentLength;
         const randomComponent = generateRandomComponent(randomLength);
-
+                 
+//MADE BY KAIF TARASAGAR 
+                                  
         let mixedPassword;
         const strategy = Math.floor(Math.random() * 3);
 
@@ -280,3 +284,8 @@ mixPasswordBtn.addEventListener('click', async () => {
 passwordInput.addEventListener('input', checkPasswordComplexity);
 
 resetUI();
+                                              /* MADE BY KAIF TARASAGAR 
+                                               
+                                              https://www.linkedin.com/in/kaif-tarasgar-0b5425326/
+                                              
+                                              https://x.com/Kaif_T_200*/
